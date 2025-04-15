@@ -16,7 +16,7 @@ echo "  --> $WORKING_DIR/ca.crt"
 echo "  --> $WORKING_DIR/server.key"
 echo "  --> $WORKING_DIR/server.crt"
 echo ""
-echo "YOU CAN GENERATE PRIVATE CERTS VIA \"1.gencert.sh\""
+echo "YOU CAN GENERATE PRIVATE CERTS VIA \"2.gencert.sh\""
 echo ""
 exit 1
 fi
