@@ -1,9 +1,8 @@
 #!/bin/bash
 
-export DEFAULT_STAGE="artemis-beta1"
-
 WORKING_PATH=$(realpath $0)
 WORKING_DIR=$(dirname $WORKING_PATH)
+source $WORKING_DIR/stage.profile
 
 touch $WORKING_DIR/ca.crt
 chmod 600 $WORKING_DIR/ca.crt

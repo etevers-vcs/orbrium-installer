@@ -1,6 +1,8 @@
 #!/bin/bash
 
-export DEFAULT_STAGE="artemis-beta1"
+WORKING_PATH=$(realpath $0)
+WORKING_DIR=$(dirname $WORKING_PATH)
+source $WORKING_DIR/stage.profile
 
 echo "==================================================="
 echo "# ENVIRONMENTS                                    #"
