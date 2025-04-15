@@ -108,7 +108,8 @@ read -p "PRESS ENTER TO BUILD INSTALLER: orbrium/install:$DEFAULT_STAGE"
 docker network create orbrium
 docker rmi orbrium/install:$DEFAULT_STAGE
 docker build -t orbrium/install:$DEFAULT_STAGE-active -f - / <<EOF
-FROM orbrium/install:$DEFAULT_STAGE
+#FROM orbrium/install:$DEFAULT_STAGE
+FROM orbrium/install:artemis-beta1
 ADD $CONF_INI /opt/orbrium/config.ini
 ADD $WORKING_DIR/ca.crt /opt/orbrium/webcert/ca.crt
 ADD $WORKING_DIR/ca.key /opt/orbrium/webcert/ca.key
