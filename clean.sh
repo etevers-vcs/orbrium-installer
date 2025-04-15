@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export DEFAULT_DEBUG="false"
+export DEFAULT_STAGE="artemis-beta1"
 
 echo "==================================================="
 echo "# ENVIRONMENTS                                    #"
@@ -23,5 +23,5 @@ echo ""
 
 docker run -ti --rm \
 	-v $DOCKER_SOCK:/var/run/docker.sock \
-	orbrium/install:$DEFAULT_DEBUG \
+	orbrium/install:$DEFAULT_STAGE \
 	python pygma.py -c all
