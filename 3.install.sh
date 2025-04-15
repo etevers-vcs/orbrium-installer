@@ -130,7 +130,6 @@ docker run -ti --rm \
 echo ""
 
 while true; do
-while true; do
 read -p "SELECT TO DEPLOY CONTAINERS [yes or no]: " _YKEY
 case $_YKEY in
 	YES | Yes | Y | yes | y)
