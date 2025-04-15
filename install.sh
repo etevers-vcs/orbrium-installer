@@ -106,7 +106,7 @@ echo ""
 
 read -p "PRESS ENTER TO BUILD INSTALLER: orbrium/install:$DEFAULT_STAGE"
 docker network create orbrium
-docker rmi orbrium/install:$DEFAULT_STAGE
+docker rmi orbrium/install:$DEFAULT_STAGE-active
 docker build -t orbrium/install:$DEFAULT_STAGE-active -f - / <<EOF
 FROM orbrium/install:$DEFAULT_STAGE
 ADD $CONF_INI /opt/orbrium/config.ini
