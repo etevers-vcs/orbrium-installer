@@ -131,34 +131,27 @@ docker run -ti --rm \
 echo ""
 
 while true; do
+while true; do
 read -p "SELECT TO DEPLOY CONTAINERS [yes or no]: " _YKEY
 case $_YKEY in
-YES)
-Yes)
-Y)
-yes)
-y)
-docker run -ti --rm \
-	-v $DOCKER_SOCK:/var/run/docker.sock \
-	orbrium/install:$DEFAULT_STAGE-active \
-	python pygma.py -d all
-echo ""
-echo "FINISHED"
-echo ""
-echo "LET'S GO ORBRIUM!!!"
-echo "  --> https://$DEFAULT_ENDPOINT"
-echo ""
-exit 0
-;;
-NO)
-No)
-N)
-no)
-n)
-echo ""
-echo "IF YOU WANT TO DEPLOY CONTAINERS... TO RUN \"4.deploy.sh\""
-echo ""
-exit 0
-;;
+	YES | Yes | Y | yes | y)
+		docker run -ti --rm \
+			-v $DOCKER_SOCK:/var/run/docker.sock \
+			orbrium/install:$DEFAULT_STAGE-active \
+			python pygma.py -d all
+		echo ""
+		echo "FINISHED"
+		echo ""
+		echo "LET'S GO ORBRIUM!!!"
+		echo "  --> https://$DEFAULT_ENDPOINT"
+		echo ""
+		exit 0
+		;;
+	NO | No | N | no | n)
+		echo ""
+		echo "IF YOU WANT TO DEPLOY CONTAINERS... TO RUN \"4.deploy.sh\""
+		echo ""
+		exit 0
+		;;
 esac
 done
