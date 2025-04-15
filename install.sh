@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export DEFAULT_STAGE="artemis-beta1"
+export DEFAULT_STAGE="artemis-beta1-dev"
 export DEFAULT_DEBUG="false"
 
 EPOCH_TIME=$(date +%s)
