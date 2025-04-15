@@ -23,5 +23,5 @@ echo ""
 
 docker run -ti --rm \
 	-v $DOCKER_SOCK:/var/run/docker.sock \
-	orbrium/install:$DEFAULT_STAGE \
+	orbrium/install:$DEFAULT_STAGE-active \
 	python pygma.py -e all

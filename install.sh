@@ -107,8 +107,8 @@ echo ""
 read -p "PRESS ENTER TO BUILD INSTALLER: orbrium/install:$DEFAULT_STAGE"
 docker network create orbrium
 docker rmi orbrium/install:$DEFAULT_STAGE
-docker build -t orbrium/install:$DEFAULT_STAGE -f - / <<EOF
-FROM orbrium/install:base
+docker build -t orbrium/install:$DEFAULT_STAGE-active -f - / <<EOF
+FROM orbrium/install:$DEFAULT_STAGE
 ADD $CONF_INI /opt/orbrium/config.ini
 ADD $WORKING_DIR/ca.crt /opt/orbrium/webcert/ca.crt
 ADD $WORKING_DIR/ca.key /opt/orbrium/webcert/ca.key
@@ -121,14 +121,14 @@ echo ""
 read -p "PRESS ENTER TO BUILD RUNTIME CONTAINERS"
 docker run -ti --rm \
 	-v $DOCKER_SOCK:/var/run/docker.sock \
-	orbrium/install:$DEFAULT_STAGE \
+	orbrium/install:$DEFAULT_STAGE-active \
 	python pygma.py -b all
 echo ""
 
 read -p "PRESS ENTER TO DEPLOY RUNTIME CONTAINERS"
 docker run -ti --rm \
 	-v $DOCKER_SOCK:/var/run/docker.sock \
-	orbrium/install:$DEFAULT_STAGE \
+	orbrium/install:$DEFAULT_STAGE-active \
 	python pygma.py -d all
 echo ""
 echo "FINISHED"
