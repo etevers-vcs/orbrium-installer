@@ -7,9 +7,22 @@ Orbrium Installer
 
 ## Install Guide
 
-[https://www.youtube.com/watch?v=erCoVM00Yn8](https://www.youtube.com/watch?v=erCoVM00Yn8)
+** Aria Automation Settings for Broadcom Value Pack **
 
 [![Aria Automation Settings](https://img.youtube.com/vi/erCoVM00Yn8/0.jpg)](https://www.youtube.com/watch?v=erCoVM00Yn8)
+
+** Install Broadcom Value Pack **
+
+[![Install Broadcom Value Pack](https://img.youtube.com/vi/Lq8jR1xri7M/0.jpg)](https://www.youtube.com/watch?v=Lq8jR1xri7M)
+
+** Workspace One Access Settings for Orbrium **
+
+[![Workspace One Access Settings](https://img.youtube.com/vi/f1nzZ5iC9Ec/0.jpg)](https://www.youtube.com/watch?v=f1nzZ5iC9Ec)
+
+** Install Orbrium **
+
+[![Install Orbrium](https://img.youtube.com/vi/V9PwLL9vYtw/0.jpg)](https://www.youtube.com/watch?v=V9PwLL9vYtw)
+
 
 ## Release Download
 
