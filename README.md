@@ -7,7 +7,7 @@ Orbrium Installer
 
 ## Install Guide
 
-<video src="https://youtu.be/erCoVM00Yn8">1. Aria Automation Initial Settings</video>
+[https://www.youtube.com/watch?v=erCoVM00Yn8](https://www.youtube.com/watch?v=erCoVM00Yn8)
 
 ## Release Download
 
