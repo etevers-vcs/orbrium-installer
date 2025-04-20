@@ -9,6 +9,8 @@ Orbrium Installer
 
 [https://www.youtube.com/watch?v=erCoVM00Yn8](https://www.youtube.com/watch?v=erCoVM00Yn8)
 
+[![Aria Automation Settings](https://img.youtube.com/vi/erCoVM00Yn8/0.jpg)](https://www.youtube.com/watch?v=erCoVM00Yn8)
+
 ## Release Download
 
 **Artemis**
