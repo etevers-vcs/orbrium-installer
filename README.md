@@ -1,5 +1,6 @@
-# orbrium-installer
-Orbrium Installer
+# Orbrium Installer
+
+Etevers Orbrium에 대한 설치 파일 및 각종 정보를 제공하는 레포지터리 입니다.
 
 ## Releases
 
@@ -9,9 +10,7 @@ Orbrium Installer
 
 ### Artemis
 
-#### 1C
-
-<a href="https://github.com/etevers-vcs/orbrium-installer/archive/refs/tags/artemis-ga-1c.zip">Download</a>
+#### 1C <small><a href="https://github.com/etevers-vcs/orbrium-installer/archive/refs/tags/artemis-ga-1c.zip">설치파일 다운로드</a></small>
 
 - Front-End
     - Home Network Design 일부 기능 개선
@@ -26,11 +25,11 @@ Orbrium Installer
 
 #### 1B
 
-<a href="https://github.com/etevers-vcs/orbrium-installer/archive/refs/tags/artemis-ga-1b.zip">Artemis GA 1b Link</a>
+<a href="https://github.com/etevers-vcs/orbrium-installer/archive/refs/tags/artemis-ga-1b.zip">설치파일 다운로드</a>
 
 #### 1A
 
-<a href="https://github.com/etevers-vcs/orbrium-installer/archive/refs/tags/artemis-ga-1a.zip">Artemis GA 1a Link</a>
+<a href="https://github.com/etevers-vcs/orbrium-installer/archive/refs/tags/artemis-ga-1a.zip">설치파일 다운로드</a>
 
 ## Video Install Guide
 
