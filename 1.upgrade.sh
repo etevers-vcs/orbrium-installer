@@ -28,34 +28,42 @@ echo "==================================================="
 echo ""
 
 read -p "PRESS ENTER TO BUILD CONTAINERS"
-echo $CONF_BIN | base64 -d | tee $CONF_INI.tmp >/dev/null
-envsubst < $CONF_INI.tmp > $CONF_INI
-rm -rf $CONF_INI.tmp
+docker pull orbrium/install:$DEFAULT_STAGE
+LAST_ACTIVE=$(docker images | grep "orbrium/install" | grep "\-active" | awk '{print $2}')
+docker run -ti --rm -v $DOCKER_SOCK:/var/run/docker.sock orbrium/install:$LAST_ACTIVE cat /opt/orbrium/config.ini > $CONF_INI
+docker run -ti --rm -v $DOCKER_SOCK:/var/run/docker.sock orbrium/install:$LAST_ACTIVE cat /opt/orbrium/webcert/ca.key > $WORKING_DIR/ca.key
+docker run -ti --rm -v $DOCKER_SOCK:/var/run/docker.sock orbrium/install:$LAST_ACTIVE cat /opt/orbrium/webcert/ca.crt > $WORKING_DIR/ca.crt
+docker run -ti --rm -v $DOCKER_SOCK:/var/run/docker.sock orbrium/install:$LAST_ACTIVE cat /opt/orbrium/webcert/server.key > $WORKING_DIR/server.key
+docker run -ti --rm -v $DOCKER_SOCK:/var/run/docker.sock orbrium/install:$LAST_ACTIVE cat /opt/orbrium/webcert/server.crt > $WORKING_DIR/server.crt
+mkdir -p $WORKING_DIR/truststores
+chmod 600 $WORKING_DIR/*.key
+chmod 600 $WORKING_DIR/*.crt
 docker network create orbrium
 docker rmi orbrium/install:$DEFAULT_STAGE-active
 docker build -t orbrium/install:$DEFAULT_STAGE-active -f - / <<EOF
 FROM orbrium/install:$DEFAULT_STAGE
-ADD $CONF_INI /opt/orbrium/config.ini
+RUN rm -rf /opt/orbrium/truststores
+ADD $WORKING_DIR/truststores /opt/orbrium/truststores
 ADD $WORKING_DIR/ca.crt /opt/orbrium/webcert/ca.crt
 ADD $WORKING_DIR/ca.key /opt/orbrium/webcert/ca.key
 ADD $WORKING_DIR/server.crt /opt/orbrium/webcert/server.crt
 ADD $WORKING_DIR/server.key /opt/orbrium/webcert/server.key
+ADD $CONF_INI /opt/orbrium/config.ini
 EOF
 rm -rf $CONF_INI
-docker run -ti --rm \
-	-v $DOCKER_SOCK:/var/run/docker.sock \
-	orbrium/install:$DEFAULT_STAGE-active \
-	python pygma.py -b all
+rm -rf $WORKING_DIR/ca.key
+rm -rf $WORKING_DIR/ca.crt
+rm -rf $WORKING_DIR/server.key
+rm -rf $WORKING_DIR/server.crt
+docker run -ti --rm -v $DOCKER_SOCK:/var/run/docker.sock orbrium/install:$DEFAULT_STAGE-active python pygma.py -b all
 echo ""
 
 while true; do
 read -p "SELECT TO DEPLOY CONTAINERS [yes or no]: " _YKEY
 case $_YKEY in
 	YES | Yes | Y | yes | y)
-		docker run -ti --rm \
-			-v $DOCKER_SOCK:/var/run/docker.sock \
-			orbrium/install:$DEFAULT_STAGE-active \
-			python pygma.py -d all
+		docker run -ti --rm -v $DOCKER_SOCK:/var/run/docker.sock orbrium/install:$LAST_ACTIVE python pygma.py -c all
+		docker run -ti --rm -v $DOCKER_SOCK:/var/run/docker.sock orbrium/install:$DEFAULT_STAGE-active python pygma.py -d all
 		echo ""
 		echo "FINISHED"
 		echo ""
