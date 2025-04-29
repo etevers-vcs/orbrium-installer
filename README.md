@@ -10,7 +10,7 @@ Etevers Orbrium에 대한 설치 파일 및 각종 정보를 제공하는 레포
 
 ### Artemis
 
-#### 1C <small><a href="https://github.com/etevers-vcs/orbrium-installer/archive/refs/tags/artemis-ga-1c.zip">설치파일 다운로드</a></small>
+#### 1C [<a href="https://github.com/etevers-vcs/orbrium-installer/archive/refs/tags/artemis-ga-1c.zip">다운로드</a>]
 
 - Front-End
     - Home Network Design 일부 기능 개선
@@ -23,28 +23,32 @@ Etevers Orbrium에 대한 설치 파일 및 각종 정보를 제공하는 레포
 - Installer
     - "1.upgrade.sh" 업그레이드 자동화 스크립트 추가
 
-#### 1B
+#### 1B [<a href="https://github.com/etevers-vcs/orbrium-installer/archive/refs/tags/artemis-ga-1b.zip">다운로드</a>]
 
-<a href="https://github.com/etevers-vcs/orbrium-installer/archive/refs/tags/artemis-ga-1b.zip">설치파일 다운로드</a>
+- 1A 설치과정 버그 픽스
+    - Broadcom Value Pack에서 AccessKey 발급시 소문자 + 숫자조합만 가능하도록 변경
 
 #### 1A
 
-<a href="https://github.com/etevers-vcs/orbrium-installer/archive/refs/tags/artemis-ga-1a.zip">설치파일 다운로드</a>
+> [!CAUTION]
+> DEPRECATED!!!: 버그로 인한 버전 제공 중지
+
+- 초기 버전
 
 ## Video Install Guide
 
-** Aria Automation Settings for Broadcom Value Pack **
+**Aria Automation Settings for Broadcom Value Pack**
 
 [![Aria Automation Settings](https://img.youtube.com/vi/erCoVM00Yn8/0.jpg)](https://www.youtube.com/watch?v=erCoVM00Yn8)
 
-** Install Broadcom Value Pack **
+**Install Broadcom Value Pack**
 
 [![Install Broadcom Value Pack](https://img.youtube.com/vi/Lq8jR1xri7M/0.jpg)](https://www.youtube.com/watch?v=Lq8jR1xri7M)
 
-** Workspace One Access Settings for Orbrium **
+**Workspace One Access Settings for Orbrium**
 
 [![Workspace One Access Settings](https://img.youtube.com/vi/f1nzZ5iC9Ec/0.jpg)](https://www.youtube.com/watch?v=f1nzZ5iC9Ec)
 
-** Install Orbrium **
+**Install Orbrium**
 
 [![Install Orbrium](https://img.youtube.com/vi/V9PwLL9vYtw/0.jpg)](https://www.youtube.com/watch?v=V9PwLL9vYtw)
