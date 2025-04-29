@@ -2,15 +2,11 @@
 
 Etevers Orbrium에 대한 설치 파일 및 각종 정보를 제공하는 레포지터리 입니다.
 
-## Releases
+세일즈 및 기술용 자료와 각종 문서는 <a href="https://github.com/etevers-vcs/orbrium-publications">[ 문서 저장고 ]</a>로 이동하여 확인하세요.
 
-### Publications
+## Release Notes
 
-<a href="https://github.com/etevers-vcs/orbrium-publications">Publication Repository Link</a>
-
-### Release Notes
-
-#### 1C [<a href="https://github.com/etevers-vcs/orbrium-installer/archive/refs/tags/artemis-ga-1c.zip">다운로드</a>]
+### 1C <a href="https://github.com/etevers-vcs/orbrium-installer/archive/refs/tags/artemis-ga-1c.zip">[ 다운로드 ]</a>
 
 - Front-End
     - Home Network Design 일부 기능 개선
@@ -23,12 +19,12 @@ Etevers Orbrium에 대한 설치 파일 및 각종 정보를 제공하는 레포
 - Installer
     - "1.upgrade.sh" 업그레이드 자동화 스크립트 추가
 
-#### 1B
+### 1B
 
 - 1A 설치과정 버그 픽스
     - Broadcom Value Pack에서 AccessKey 발급시 소문자 + 숫자조합만 가능하도록 변경
 
-#### 1A
+### 1A
 
 > [!CAUTION]
 > DEPRECATED!!!: 버그로 인한 버전 제공 중지
