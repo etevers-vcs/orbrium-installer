@@ -8,7 +8,7 @@ Etevers Orbrium에 대한 설치 파일 및 각종 정보를 제공하는 레포
 
 <a href="https://github.com/etevers-vcs/orbrium-publications">Publication Repository Link</a>
 
-### Artemis
+### Release Notes
 
 #### 1C [<a href="https://github.com/etevers-vcs/orbrium-installer/archive/refs/tags/artemis-ga-1c.zip">다운로드</a>]
 
@@ -23,7 +23,7 @@ Etevers Orbrium에 대한 설치 파일 및 각종 정보를 제공하는 레포
 - Installer
     - "1.upgrade.sh" 업그레이드 자동화 스크립트 추가
 
-#### 1B [<a href="https://github.com/etevers-vcs/orbrium-installer/archive/refs/tags/artemis-ga-1b.zip">다운로드</a>]
+#### 1B
 
 - 1A 설치과정 버그 픽스
     - Broadcom Value Pack에서 AccessKey 발급시 소문자 + 숫자조합만 가능하도록 변경
