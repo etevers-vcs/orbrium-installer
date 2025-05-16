@@ -19,7 +19,7 @@ Etevers Orbrium에 대한 설치 파일 및 각종 정보를 제공하는 레포
     - "truststore" 로 오인표기 되어있던 부분을 "truststores" 로 정상표기
     - truststores 디렉토리 사전생성
 
-### 1C <a href="https://github.com/etevers-vcs/orbrium-installer/archive/refs/tags/artemis-ga-1c.zip">[ 다운로드 ]</a>
+### 1C
 
 - Front-End
     - Home Network Design 일부 기능 개선
