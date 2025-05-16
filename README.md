@@ -6,6 +6,19 @@ Etevers Orbrium에 대한 설치 파일 및 각종 정보를 제공하는 레포
 
 ## Release Notes
 
+### 1D <a href="https://github.com/etevers-vcs/orbrium-installer/archive/refs/tags/artemis-ga-1d.zip">[ 다운로드 ]</a>
+
+- Front-End
+    - 변경사항 없음
+
+- Back-End
+    - 변경사항 없음
+
+- Installer
+    - 폐쇄망에서 이미지 빌드 작업 오류 혜결
+    - "truststore" 로 오인표기 되어있던 부분을 "truststores" 로 정상표기
+    - truststores 디렉토리 사전생성
+
 ### 1C <a href="https://github.com/etevers-vcs/orbrium-installer/archive/refs/tags/artemis-ga-1c.zip">[ 다운로드 ]</a>
 
 - Front-End
